@@ -106,6 +106,7 @@ function Hero() {
 
               <ExternalLink
                 display={{ base: "none", md: "inline" }}
+                p="unset"
                 href={"/register"}
               >
                 <WaitingListButton />
