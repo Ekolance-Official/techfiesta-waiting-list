@@ -104,7 +104,7 @@ function HowToJoin() {
             <Spacer />
 
             <Box pb={{ base: "50px", md: "unset" }}>
-              <ExternalLink href={"https://ekolance.io"} p="unset">
+              <ExternalLink href={"/register"} p="unset">
                 <Button
                   h={{ base: "44px", lg: "64px" }}
                   outline={"none"}

@@ -136,7 +136,7 @@ const Navbar = () => {
 
       <ExternalLink
         display={{ base: "none", md: "inline" }}
-        href={"https://ekolance.io"}
+        href={"/register"}
       >
         <Button
           h="44px"

@@ -2,6 +2,7 @@ import { Box, Grid, GridItem, Flex, Text, Image } from "@chakra-ui/react";
 import Divide from "../../assets/icons/Divide";
 import { DisputeBox } from "../../reusable/styled/components";
 import WaitingListButton from "../../reusable/components/WaitingListButton";
+import { ExternalLink } from "../../utils/Links";
 
 function Hero() {
   const claims = [
@@ -17,7 +18,7 @@ function Hero() {
       minH={{
         base: "calc(100vh - 5rem)",
         md: "unset",
-        // lg: "calc(100vh - 64px)",
+        lg: "calc(100vh - 64px)",
       }}
       px={{ base: "1rem", md: "2rem", lg: "" }}
       w={{ base: "full", lg: "1200px" }}
@@ -103,7 +104,12 @@ function Hero() {
                 the tech space.
               </Text>
 
-              <WaitingListButton />
+              <ExternalLink
+                display={{ base: "none", md: "inline" }}
+                href={"/register"}
+              >
+                <WaitingListButton />
+              </ExternalLink>
             </GridItem>
 
             <GridItem pt={{ lg: "56px" }}>
