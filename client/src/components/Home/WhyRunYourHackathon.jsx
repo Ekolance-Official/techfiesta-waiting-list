@@ -51,11 +51,11 @@ function WhyGridItem({ title, active, description, img }) {
   return (
     <Grid
       gridTemplateColumns={{ base: "20% 80%", md: "unset" }}
-      bg={
-        active &&
-        "linear-gradient(92.5deg, rgba(51, 51, 51, 0.8) 0%, rgba(0, 0, 0, 0.8) 98.89%, rgba(0, 0, 0, 0.8) 98.89%)"
-      }
-      color={active && "white"}
+      color="black"
+      _hover={{
+        color: "white",
+        bg: "linear-gradient(92.5deg, rgba(51, 51, 51, 0.8) 0%, rgba(0, 0, 0, 0.8) 98.89%, rgba(0, 0, 0, 0.8) 98.89%)",
+      }}
       borderRadius={{ base: "11.3333px" }}
       borderWidth={"2px"}
       borderColor={"black"}
