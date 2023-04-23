@@ -2,6 +2,7 @@ import { Box, Grid, GridItem, Text, VStack } from "@chakra-ui/react";
 import React from "react";
 import WaitingListButton from "../../reusable/components/WaitingListButton";
 import HowToGridItem from "../../reusable/components/HowToGridItem";
+import { InternalLink } from "../../utils/Links";
 
 function WhyContainer() {
   const howtos = [
@@ -60,7 +61,9 @@ function WhyContainer() {
             their strategy to remain competitive in their respective industries.
           </Text>
 
-          <WaitingListButton />
+          <InternalLink to="/register">
+            <WaitingListButton />
+          </InternalLink>
         </GridItem>
 
         <GridItem pt={{ base: "50px", md: "42px", lg: "unset" }}>

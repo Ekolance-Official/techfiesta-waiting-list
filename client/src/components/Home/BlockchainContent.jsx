@@ -10,7 +10,7 @@ function BlockchainContent() {
         "linear-gradient(92.5deg, #333333 0%, #000000 98.89%, #000000 98.89%);"
       }
       lineHeight={{ base: "27.9px", lg: "54px" }}
-      fontSize={{ base: "32px", r: "48px" }}
+      fontSize={{ base: "32px", r: "32px" }}
       // fontSize={{ base: "24px", lg: "48px" }}
       fontWeight={{ lg: "400" }}
       h={{ md: "198.4px" }}
@@ -25,8 +25,9 @@ function BlockchainContent() {
         w={{ base: "full", md: "full", r: "1200px" }}
       >
         <Text color="white" textAlign={{ md: "center" }}>
-          Blockchain is expected to create $1.4 trillion in Revenue for
-          businesses around the world by 2030. Be a leader
+          Hackathons are the perfect way to jumpstsart the innovation process,
+          with a condensed timeline that encourages quick thinking, idea
+          generation, and rapid prototyping
         </Text>
       </Flex>
     </Box>

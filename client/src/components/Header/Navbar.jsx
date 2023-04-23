@@ -52,7 +52,7 @@ const Navbar = () => {
           </Box>
 
           <Text fontSize={{ base: "22.67px", lg: "40px" }} color="black">
-            Tech
+            tech
             <Text
               display={"inline"}
               color={"linear-gradient(to right, red , yellow)"}
@@ -134,10 +134,7 @@ const Navbar = () => {
         aria-label={""}
       />
 
-      <ExternalLink
-        display={{ base: "none", md: "inline" }}
-        href={"/register"}
-      >
+      <InternalLink display={{ base: "none", md: "inline" }} to={"/register"}>
         <Button
           h="44px"
           outline={"none"}
@@ -149,7 +146,7 @@ const Navbar = () => {
         >
           Join Waitlist
         </Button>
-      </ExternalLink>
+      </InternalLink>
 
       {/* <Drawer onClose={onClose} isOpen={isOpen} size={"sm"}>
         <DrawerOverlay />

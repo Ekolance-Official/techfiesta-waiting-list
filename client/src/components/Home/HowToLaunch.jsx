@@ -6,27 +6,27 @@ function HowToLaunch() {
     {
       title: "Register Your Company",
       description:
-        "Sign up to our platform and create an account for your company to start organizing your hackathons.",
+        "Sign up to our platform and create an account for your company to start organizing your hackathon",
     },
     {
-      title: "Define Your Hackathons",
+      title: "Define Your Hackathon",
       description:
-        "Provide information about your hackathons, including the assignments, target groups, bounties and timeline.",
+        "Provide information about your hackathon, including the assignments, target groups, bounties and timeline",
     },
     {
-      title: "Launch Your Hackathons",
+      title: "Launch Your Hackathon",
       description:
-        "Make your hackathons live on our platform and let participants to join in.",
+        "Make your hackathon live on our platform and let particpants to join in",
     },
     {
       title: "Evaluate Your Results",
       description:
-        "Review submissions from participants in your company dashboard and select the winners based on the criteria you defined.",
+        "Review submissions from participants in your company dashboard and select the winners based on the criteria you defined",
     },
     {
       title: "Automate Payouts",
       description:
-        "The TechFiesta platform automatically sends bounties to the winners addresses after you have validated the winners.",
+        "The TechFiesta platform automatically sends bounties to the winners’ addresses after you have validated the winners",
     },
   ];
 
@@ -37,7 +37,7 @@ function HowToLaunch() {
       w={{ md: "full", lg: "" }}
       mx={{ lg: "auto" }}
       overflow={"hidden"}
-      maxH={{ lg: "80vh" }}
+      maxH={{ lg: "80vh", r: "776px" }}
     >
       <GridItem gridRow={"1/-1"} gridColumn={"1/-1"}>
         <Grid gridTemplateColumns={"40% 60%"}>
@@ -75,7 +75,7 @@ function HowToLaunch() {
               w={{ md: "467px", lg: "unset" }}
               lineHeight={{ md: "40.83px" }}
             >
-              How to launch your Hackathons on techFest
+              How to launch your Hackathons
             </Text>
 
             <Text
@@ -93,7 +93,7 @@ function HowToLaunch() {
 
           <Grid
             mb={{ base: "32px" }}
-            mt={{ base: "38px", md: "45px" }}
+            mt={{ base: "38px", md: "45px", lg: "56px" }}
             px={{ base: "1rem", md: "2rem", lg: "" }}
             gap={{ base: "28.91px", md: "8.26px" }}
             w="full"

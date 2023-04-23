@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import WaitingListButton from "../../reusable/components/WaitingListButton";
-import { ExternalLink } from "../../utils/Links";
+import { ExternalLink, InternalLink } from "../../utils/Links";
 
 function HowToJoin() {
   return (
@@ -78,7 +78,7 @@ function HowToJoin() {
                 fontWeight={{ base: "700" }}
                 mb={{ base: "8px", lg: " 16px" }}
               >
-                How can you join as an Hackhaton participant
+                How can you join as a Hackathon participant?
               </Text>
 
               <Text
@@ -104,7 +104,7 @@ function HowToJoin() {
             <Spacer />
 
             <Box pb={{ base: "50px", md: "unset" }}>
-              <ExternalLink href={"/register"} p="unset">
+              <InternalLink to={"/register"} p="unset">
                 <Button
                   h={{ base: "44px", lg: "64px" }}
                   outline={"none"}
@@ -119,7 +119,7 @@ function HowToJoin() {
                 >
                   Join Waitlist
                 </Button>
-              </ExternalLink>
+              </InternalLink>
             </Box>
           </Flex>
         </Box>

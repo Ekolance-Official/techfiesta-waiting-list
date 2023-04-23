@@ -119,7 +119,7 @@ function WhyRunYourHackathon() {
       >
         Why Run Your Hackhaton on
         <Text>
-          Tech
+          tech
           <Text
             display={"inline"}
             bgGradient="linear-gradient(99.72deg, #2C69D1 7.35%, #0ABCF9 86.94%)"

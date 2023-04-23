@@ -2,7 +2,7 @@ import { Box, Grid, GridItem, Flex, Text, Image } from "@chakra-ui/react";
 import Divide from "../../assets/icons/Divide";
 import { DisputeBox } from "../../reusable/styled/components";
 import WaitingListButton from "../../reusable/components/WaitingListButton";
-import { ExternalLink } from "../../utils/Links";
+import { ExternalLink, InternalLink } from "../../utils/Links";
 
 function Hero() {
   const claims = [
@@ -90,7 +90,7 @@ function Hero() {
                 >
                   Innovation
                 </Text>{" "}
-                with TechFiesta
+                with techFiesta
               </Text>
 
               <Text
@@ -104,13 +104,13 @@ function Hero() {
                 the tech space.
               </Text>
 
-              <ExternalLink
+              <InternalLink
                 display={{ base: "none", md: "inline" }}
                 p="unset"
-                href={"/register"}
+                to={"/register"}
               >
                 <WaitingListButton />
-              </ExternalLink>
+              </InternalLink>
             </GridItem>
 
             <GridItem pt={{ lg: "56px" }}>
