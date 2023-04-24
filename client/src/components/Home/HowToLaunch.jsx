@@ -36,7 +36,11 @@ function HowToLaunch() {
 
   return (
     <Grid
-      gridTemplateColumns={{ r: "repeat(2, 1fr)", md: "50% 50%" }}
+      gridTemplateColumns={{
+        r: "repeat(2, 1fr)",
+        md: "50% 50%",
+      }}
+      gap={{ r: "126px" }}
       w={{ base: "full", r: "1200px" }}
       mx={{ base: "auto" }}
       overflow={"hidden"}
