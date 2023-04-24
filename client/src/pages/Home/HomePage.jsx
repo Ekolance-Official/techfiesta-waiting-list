@@ -8,17 +8,20 @@ import BlockchainContent from "../../components/Home/BlockchainContent";
 import WhyRunYourHackathon from "../../components/Home/WhyRunYourHackathon";
 import HowToJoin from "../../components/Home/HowToJoin";
 import Footer from "../../components/Footer/Footer";
+import Map from "../../components/Home/Map";
+import Experience from "../../components/Home/Experience";
 
 function HomePage() {
   return (
     <BodyWrapper bgColor={"white"}>
       <Navbar />
       <Hero />
+      <Map />
       <WhyContainer />
       <BlockchainContent />
       <WhyRunYourHackathon />
       <HowToLaunch />
-      {/*TODO: Add one section */}
+      <Experience />
       <HowToJoin />
       <Footer />
     </BodyWrapper>

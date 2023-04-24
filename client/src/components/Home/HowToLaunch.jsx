@@ -1,5 +1,9 @@
 import { Box, Flex, Grid, GridItem, Image, Text } from "@chakra-ui/react";
 import React from "react";
+import {
+  HowToLaunchContent,
+  HowToLaunchIcon,
+} from "../../reusable/styled/components";
 
 function HowToLaunch() {
   const datas = [
@@ -32,132 +36,61 @@ function HowToLaunch() {
 
   return (
     <Grid
-      gridTemplateColumns={"repeat(2, 1fr)"}
-      mt={{ md: "72px", lg: "159px", base: "50px" }}
-      w={{ md: "full", lg: "" }}
-      mx={{ lg: "auto" }}
+      gridTemplateColumns={{ r: "repeat(2, 1fr)", md: "50% 50%" }}
+      w={{ base: "full", r: "1200px" }}
+      mx={{ base: "auto" }}
       overflow={"hidden"}
       maxH={{ lg: "80vh", r: "776px" }}
+      color="black"
+      px={{ base: "1rem", md: "2rem" }}
+      mb={{ base: "32px", md: "128px" }}
     >
-      <GridItem gridRow={"1/-1"} gridColumn={"1/-1"}>
-        <Grid gridTemplateColumns={"40% 60%"}>
-          <Box />
-          <Box
-            h={{ base: "320px", md: "full", lg: "100vh" }}
-            bg={`url('/images/girl.png') no-repeat`}
-            backgroundSize="cover"
+      <GridItem overflow={"hidden"}>
+        <Box pt={{ base: "72px", md: "unset" }}>
+          <Text
+            fontSize={{ base: "28px", md: "32px" }}
+            color="black"
+            fontWeight={{ base: "700" }}
+            w={{ md: "467px", lg: "unset" }}
+            lineHeight={{ md: "40.83px" }}
           >
-            <Image src={"/images/girl.png"} w="full" h="full" />
-          </Box>
-        </Grid>
-      </GridItem>
-      <GridItem
-        gridRow={"1/-1"}
-        gridColumn={"1/-1"}
-        // minH={{ base: "1262px", md: "50vh", lg: "90vh" }}
-        bg={
-          " linear-gradient(115.17deg, rgba(0, 0, 0, 0.2) 42.92%, rgba(0, 34, 83, 0.2) 100.76%), linear-gradient(115.17deg, rgba(0, 0, 0, 0.2) 42.92%, rgba(0, 34, 83, 0.2) 100.76%), linear-gradient(115.17deg, rgba(0, 0, 0, 0.2) 42.92%, rgba(0, 34, 83, 0.2) 100.76%), linear-gradient(90.52deg, #296ECF 27.29%, rgba(4, 131, 180, 0.53) 53.1%, rgba(14, 175, 236, 0) 84.06%)"
-        }
-        pt={{ lg: "50px" }}
-      >
-        <Box
-          w={{ lg: "1200px", base: "unset" }}
-          mx={{ lg: "auto", base: "unset" }}
-        >
-          <Box
-            pt={{ base: "72px", md: "45px" }}
-            px={{ base: "1rem", md: "2rem" }}
+            How to launch your Hackathons
+          </Text>
+
+          <Text
+            fontSize={{ base: "14px" }}
+            mt={{ base: "8.26px", md: "20px" }}
+            color="black"
+            lineHeight={"17.86px"}
+            mb={{ base: "66px" }}
           >
-            <Text
-              fontSize={{ base: "24px", md: "32px" }}
-              color="white"
-              fontWeight={{ md: "700" }}
-              w={{ md: "467px", lg: "unset" }}
-              lineHeight={{ md: "40.83px" }}
-            >
-              How to launch your Hackathons
-            </Text>
-
-            <Text
-              fontSize={{ base: "14px" }}
-              mt={{ base: "8.26px", md: "20px" }}
-              color="white"
-              lineHeight={"17.86px"}
-              w={{ md: "467px", lg: "732px" }}
-            >
-              Launching a successful hackathons has never been this easier. With
-              TechFiesta, you can create and manage your event with just a few
-              simple steps.
-            </Text>
-          </Box>
-
-          <Grid
-            mb={{ base: "32px" }}
-            mt={{ base: "38px", md: "45px", lg: "56px" }}
-            px={{ base: "1rem", md: "2rem", lg: "" }}
-            gap={{ base: "28.91px", md: "8.26px" }}
-            w="full"
-            gridTemplateColumns={{
-              base: "repeat(1, 1fr)",
-              md: "repeat(3, 1fr)",
-              lg: "repeat(5, 1fr)",
-            }}
-            gridTemplateRows={{ lg: "227.2px" }}
-          >
-            {datas.map(({ title, description }, key) => (
-              <GridItem
-                w="full"
-                bg="linear-gradient(92.5deg, #333333 0%, #000000 98.89%, #000000 98.89%)"
-                key={key}
-                // mb="28.91px"
-                px={"8px"}
-                py="11px"
-                h={{ md: "", lg: "250px" }}
-                borderRadius={"13.66px"}
-                overflow={"hidden"}
-              >
-                <Flex
-                  w="full"
-                  direction={"column"}
-                  justifyContent={"center"}
-                  alignItems={"center"}
-                  color="white"
-                  pxx={{ lg: "20px" }}
-                >
-                  <Box
-                    borderRadius={"50px"}
-                    w="56px"
-                    h="56px"
-                    bg="linear-gradient(99.72deg, rgba(44, 105, 209, 0.3) 7.35%, rgba(10, 188, 249, 0.3) 86.94%)"
-                  >
-                    <Flex
-                      w="full"
-                      h="full"
-                      alignItems={"center"}
-                      justifyContent={"center"}
-                    >
-                      <Image src={`/images/globe.png`} />
-                    </Flex>
-                  </Box>
-
-                  <Text
-                    mt="10px"
-                    fontSize="21.17px"
-                    fontWeight={"700"}
-                    lineHeight={"27px"}
-                    textAlign={"center"}
-                  >
-                    {title}
-                  </Text>
-
-                  <Text textAlign={"center"} mt="3px" fontSize={{ lg: "14px" }}>
-                    {description}
-                  </Text>
-                </Flex>
-              </GridItem>
-            ))}
-          </Grid>
+            Launching a successful hackathons has never been this easier. With
+            TechFiesta, you can create and manage your event with just a few
+            simple steps.
+          </Text>
         </Box>
+      </GridItem>
+      <GridItem>
+        {datas.map((data, index) => (
+          <Box key={index}>
+            <Flex alignItems={"center"}>
+              <HowToLaunchIcon />
+
+              <Text
+                background=" linear-gradient(99.72deg, #2C69D1 7.35%, #0ABCF9 86.94%)"
+                backgroundClip={"text"}
+                fontWeight={"700"}
+                fontSize={{ md: "16px" }}
+              >
+                {data.title}
+              </Text>
+            </Flex>
+
+            <HowToLaunchContent>
+              <Text fontSize={{ base: "14px" }}>{data.description}</Text>
+            </HowToLaunchContent>
+          </Box>
+        ))}
       </GridItem>
     </Grid>
   );

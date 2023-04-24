@@ -2,7 +2,7 @@ import { extendTheme } from "@chakra-ui/react";
 
 const colors = {
   white: "#ffffff",
-  black: "#000000",
+  black: "#333333",
   sdark: "#333333",
   brand: {
     primary: "#2C69D1",
@@ -43,7 +43,8 @@ const styles = {
     body: {
       fontFamily: '"Space Grotesk", sans-serif',
       fontWeight: "normal",
-      background: "white",
+      // background: "white",
+      backgroundImage: `url("/images/bg.png")  no-repeat`,
       color: "black",
       tansition: "all 0.2s ease-in-out",
     },

@@ -5,7 +5,6 @@ import {
   GridItem,
   Image,
   Text,
-  VStack,
 } from "@chakra-ui/react";
 import React from "react";
 
@@ -50,51 +49,33 @@ const howtos = [
 function WhyGridItem({ title, active, description, img }) {
   return (
     <Grid
-      gridTemplateColumns={{ base: "20% 80%", md: "unset" }}
       color="black"
       _hover={{
         color: "white",
         bg: "linear-gradient(92.5deg, rgba(51, 51, 51, 0.8) 0%, rgba(0, 0, 0, 0.8) 98.89%, rgba(0, 0, 0, 0.8) 98.89%)",
       }}
       borderRadius={{ base: "11.3333px" }}
-      borderWidth={"2px"}
+      borderWidth={"1px"}
       borderColor={"black"}
-      py={{ md: "35px" }}
-      h={{ lg: "304px" }}
+      h={{ base: "220px", md: "230px", lg: "180px" }}
+      gap={{ md: "14px" }}
     >
-      <GridItem>
-        <Flex h="full" w="full" alignItems="center" justifyContent={"center"}>
-          <Box
-            borderRadius={"50px"}
-            w="56px"
-            h="56px"
-            bg="linear-gradient(99.72deg, rgba(44, 105, 209, 0.3) 7.35%, rgba(10, 188, 249, 0.3) 86.94%)"
-          >
-            <Flex
-              w="full"
-              h="full"
-              alignItems={"center"}
-              justifyContent={"center"}
-            >
-              <Image src={`/images/${img}`} />
-            </Flex>
-          </Box>
-        </Flex>
-      </GridItem>
       <GridItem py="14px" px="9px">
-        <Text
-          textAlign={{ md: "center" }}
-          fontSize={{ base: "16px" }}
-          fontWeight={"bold"}
-          mb="5px"
-        >
-          {title}
-        </Text>
-        <Text
-          textAlign={{ md: "center" }}
-          fontSize={{ base: "14px" }}
-          lineHeight={{ base: "18px" }}
-        >
+        <Flex alignItems={"center"} mb={{ base: "16px" }}>
+          <Image
+            mr="10px"
+            src={`/images/world.svg`}
+            h={{ base: "24px" }}
+            w={{ base: "24px" }}
+          />
+          <Text
+            fontSize={{ base: "16px" }}
+            fontWeight={"bold"}
+          >
+            {title}
+          </Text>
+        </Flex>
+        <Text fontSize={{ base: "14px" }} lineHeight={{ base: "17.86px" }}>
           {description}
         </Text>
       </GridItem>
@@ -105,10 +86,10 @@ function WhyGridItem({ title, active, description, img }) {
 function WhyRunYourHackathon() {
   return (
     <Box
-      mt={{ base: "32px", md: "72px", lg: "159px" }}
       px={{ base: "1rem", md: "2rem" }}
-      w={{ lg: "1200px" }}
+      w={{ r: "1200px" }}
       mx={{ lg: "auto" }}
+      mb={{ md: "128px" }}
     >
       <Text
         fontSize={{ base: "32px", lg: "48px" }}
@@ -117,40 +98,25 @@ function WhyRunYourHackathon() {
         textAlign={{ md: "center" }}
         mb={{ md: "39.11px", base: "7px" }}
       >
-        Why Run Your Hackhaton on
-        <Text>
-          tech
-          <Text
-            display={"inline"}
-            bgGradient="linear-gradient(99.72deg, #2C69D1 7.35%, #0ABCF9 86.94%)"
-            bgClip="text"
-          >
-            Fiesta
-          </Text>
-        </Text>
+        What are the Benefits of Using{" "}
+        <Text display={"inline"}> techFiesta </Text>
       </Text>
 
-      {/* <Text
-        fontSize={{ base: "14px" }}
-        lineHeight={{ base: "17.86px" }}
-        mt="7.56px"
-        textAlign={{ md: "center" }}
-        fontWeight={{ md: "400" }}
-        mb={{ base: "39px", md: "unset" }}
-      >
-        Escrow is a financial arrangement where a third party holds and
-        regulates payment of the funds required for two parties involved in a
-        transaction.
-      </Text> */}
-
       <Grid
-        gridTemplateColumns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)" }}
+        gridTemplateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }}
         gap={4}
         mt={{ md: "39px" }}
       >
         {howtos.map((props, _key) => (
-          <Box key={_key}>
-            <WhyGridItem {...props} />
+          <Box key={_key} mb={{ base: "10px" }}>
+            <Grid w={{ base: "full", md: "unset" }}>
+              <GridItem gridRow={"1/-1"} gridColumn={"1/-1"}>
+                {/* <Image src="/images/pbg.jpg" w="full" h="full" /> */}
+              </GridItem>
+              <GridItem gridRow={"1/-1"} gridColumn={"1/-1"}>
+                <WhyGridItem {...props} />
+              </GridItem>
+            </Grid>
           </Box>
         ))}
       </Grid>

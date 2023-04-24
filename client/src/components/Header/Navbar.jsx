@@ -6,20 +6,11 @@ import {
   Spacer,
   Text,
   Box,
-  //   Drawer,
-  //   DrawerOverlay,
-  //   DrawerContent,
-  //   DrawerCloseButton,
-  //   DrawerBody,
-  //   useDisclosure,
 } from "@chakra-ui/react";
 import { VscMenu } from "react-icons/vsc";
 import { ExternalLink, InternalLink, NavLink } from "../../utils/Links";
 
 const Navbar = () => {
-  //   const navLinks = [];
-  //   const { isOpen, onOpen, onClose } = useDisclosure();
-
   return (
     <Flex
       zIndex={"100"}
@@ -30,7 +21,7 @@ const Navbar = () => {
       py={{ base: "1.2rem", md: "18px", lg: "none" }}
       align="center"
       justify="space-between"
-      w={{ base: "full", lg: "1200px" }}
+      w={{ base: "full", lg: "", r: "1200px" }}
       mx={"auto"}
       color="brand.light"
       display={"flex"}
@@ -118,7 +109,7 @@ const Navbar = () => {
           />
         </ExternalLink>
       </Flex> */}
-      <IconButton
+      {/* <IconButton
         bg="white !important"
         boxShadow={"none"}
         outline={"none"}
@@ -132,9 +123,9 @@ const Navbar = () => {
         _focus={{ outline: "none", bg: "none" }}
         _active={{ outline: "none", bg: "none" }}
         aria-label={""}
-      />
+      /> */}
 
-      <InternalLink display={{ base: "none", md: "inline" }} to={"/register"}>
+      <InternalLink display={{ md: "inline", base: "none" }} to={"/register"}>
         <Button
           h="44px"
           outline={"none"}

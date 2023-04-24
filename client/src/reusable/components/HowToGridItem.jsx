@@ -34,7 +34,7 @@ function HowToGridItem({ title, active, description, img }) {
       </GridItem>
       <GridItem py="14px" px="9px">
         <Text
-          fontSize={{ base: "16px", lg: "18px" }}
+          fontSize={{ base: "16px", md: "18px", lg: "18px" }}
           fontWeight={"bold"}
           mb="5px"
           textTransform={"capitalize"}
@@ -42,8 +42,8 @@ function HowToGridItem({ title, active, description, img }) {
           {title}
         </Text>
         <Text
-          fontSize={{ base: "14px", md: "16px" }}
-          lineHeight={{ base: "18px", md: "24px" }}
+          fontSize={{ base: "14px", md: "16px", }}
+          lineHeight={{ base: "17.86px", md: "24px" }}
         >
           {description}
         </Text>

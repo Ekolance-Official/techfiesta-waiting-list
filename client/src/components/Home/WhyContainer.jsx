@@ -3,6 +3,7 @@ import React from "react";
 import WaitingListButton from "../../reusable/components/WaitingListButton";
 import HowToGridItem from "../../reusable/components/HowToGridItem";
 import { InternalLink } from "../../utils/Links";
+import { WhySingleItem } from "../../reusable/styled/components";
 
 function WhyContainer() {
   const howtos = [
@@ -32,26 +33,25 @@ function WhyContainer() {
   return (
     <Box
       px={{ base: "1rem", md: "2rem" }}
-      mt={{ md: "156px", r: "116px" }}
       w={{ md: "501px", lg: "1200px" }}
       mx={{ lg: "auto" }}
       minH={{ lg: "70vh" }}
+      mb={{ base: "32px", md: "128px" }}
     >
       <Grid gridTemplateColumns={{ lg: "repeat(2, 1fr)" }} gap={{ lg: "20" }}>
         <GridItem pb={{ base: "18px" }}>
           <Text
-            mt={{ lg: "32px" }}
-            fontSize={{ base: "24px", md: "32px", lg: "48px" }}
+            fontSize={{ base: "28px", md: "32px", lg: "48px" }}
             fontWeight={{ base: "700" }}
-            lineHeight={{ base: "31px", md: "36.27px", lg: "64px" }}
+            lineHeight={{ base: "35.73px", md: "", lg: "" }}
           >
             Why run a Hackathon?
           </Text>
 
           <Text
             fontWeight={"400"}
-            fontSize={{ base: "14px", lg: "16px" }}
-            lineHeight={{ base: "24px", lg: "24px" }}
+            fontSize={{ base: "14px" }}
+            lineHeight={{ base: "17.86px", lg: "24px" }}
             mt="10px"
             mb={{ base: "24px" }}
           >
@@ -66,12 +66,12 @@ function WhyContainer() {
           </InternalLink>
         </GridItem>
 
-        <GridItem pt={{ base: "50px", md: "42px", lg: "unset" }}>
+        <GridItem pt={{ base: "50px", md: "42px", lg: "unset" }} color="white">
           <VStack spacing={4} align="stretch">
-            {howtos.map((props, _key) => (
-              <Box key={_key}>
+            {howtos.map((props, index) => (
+              <WhySingleItem key={index}>
                 <HowToGridItem {...props} />
-              </Box>
+              </WhySingleItem>
             ))}
           </VStack>
         </GridItem>

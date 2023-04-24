@@ -16,7 +16,6 @@ function WaitingListButton({ bgn }) {
       borderRadius={"2.8px"}
       boxShadow={"4.5333px 4.5333px 0px rgba(51, 51, 51, 0.25)"}
       color="white"
-      fontSize={{ lg: "14px" }}
     >
       Join Waitlist
     </Button>

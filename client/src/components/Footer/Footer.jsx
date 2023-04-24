@@ -7,8 +7,9 @@ function Footer() {
     <Grid
       px={{ base: "1rem", md: "none" }}
       gridTemplateColumns={{ md: "repeat(3, 1fr)" }}
-      mt={{ base: "32px", md: "72px", lg: "159px" }}
       mb={{ md: "19px" }}
+      w={{ r: "1200px" }}
+      mx={{ r: "auto" }}
     >
       <GridItem>
         <Flex alignItems={"center"} mt={{ base: "32px", md: "unset" }}>
@@ -22,7 +23,7 @@ function Footer() {
           </Box>
 
           <Text fontSize={{ base: "22.67px" }} color="black">
-            Tech
+            tech
             <Text
               display={"inline"}
               color={"linear-gradient(to right, red , yellow)"}
@@ -50,70 +51,35 @@ function Footer() {
 
         <Flex justifyContent={{ lg: "center" }}>
           <Box
-            w={{ base: "19.4px", lg: "32px" }}
-            h={{ base: "19.4px", lg: "32px" }}
+            w={{ base: "24.4px", lg: "32px" }}
+            h={{ base: "24.4px", lg: "32px" }}
+            mr="16px"
           >
             <ExternalLink
-              href="https://www.facebook.com/profile.php?id=100079984088593"
-              title="facebook"
+              href="https://t.me/+R2dFGg-iB5NlYzg0"
+              title="Join us on Telegram"
             >
               <Image
                 alt="facebook"
                 w="full"
                 h="full"
                 cursor={"pointer"}
-                src={"/images/facebook.svg"}
+                src={"/images/telegram.svg"}
               />
             </ExternalLink>
           </Box>
 
           <Box
-            w={{ base: "19.4px", lg: "32px" }}
-            h={{ base: "19.4px", lg: "32px" }}
-            ml="14.8px"
+            w={{ base: "24.4px", lg: "32px" }}
+            h={{ base: "24.4px", lg: "32px" }}
           >
-            <ExternalLink
-              href="https://www.linkedin.com/company/ekolance/"
-              title=""
-            >
+            <ExternalLink href="" title="Join us on Discord">
               <Image
+                alt="facebook"
                 w="full"
                 h="full"
                 cursor={"pointer"}
-                src={"/images/linkedin.svg"}
-              />
-            </ExternalLink>
-          </Box>
-
-          <Box
-            w={{ base: "19.4px", lg: "32px" }}
-            h={{ base: "19.4px", lg: "32px" }}
-            ml="14.8px"
-          >
-            <ExternalLink
-              href="https://www.instagram.com/ekolance.io/"
-              title=""
-            >
-              <Image
-                w="full"
-                h="full"
-                cursor={"pointer"}
-                src={"/images/instagram.svg"}
-              />
-            </ExternalLink>
-          </Box>
-
-          <Box
-            w={{ base: "19.4px", lg: "32px" }}
-            h={{ base: "19.4px", lg: "32px" }}
-            ml="14.8px"
-          >
-            <ExternalLink href="https://twitter.com/ekolance" title="">
-              <Image
-                w="full"
-                h="full"
-                cursor={"pointer"}
-                src={"/images/twitter.svg"}
+                src={"/images/discord.svg"}
               />
             </ExternalLink>
           </Box>
@@ -130,7 +96,7 @@ function Footer() {
               w="31px"
               h="31px"
               cursor={"pointer"}
-              src={"/images/human_logo.png"}
+              src={"/images/human_logo.svg"}
             />{" "}
             <Text ml={{ base: "4px", md: "unset" }}>
               Human Protocol Foundation
@@ -144,7 +110,7 @@ function Footer() {
               w="full"
               h="full"
               cursor={"pointer"}
-              src={"/images/ekolance.png"}
+              src={"/images/ekolance.svg"}
             />
           </ExternalLink>
         </Flex>

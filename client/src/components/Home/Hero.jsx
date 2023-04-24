@@ -21,8 +21,9 @@ function Hero() {
         lg: "calc(100vh - 64px)",
       }}
       px={{ base: "1rem", md: "2rem", lg: "" }}
-      w={{ base: "full", lg: "1200px" }}
+      w={{ base: "full", r: "1200px" }}
       mx={{ lg: "auto" }}
+      mb={{ base: "58px", md: '133px' }}
     >
       <Grid w="full" gridTemplateColumns={"repeat(2, 1fr)"}>
         <GridItem
@@ -53,7 +54,7 @@ function Hero() {
             <GridItem w="full">
               <Flex
                 display={"none"}
-                mt={{ base: "103px", md: "142px" }}
+                mt={{ base: "91px", md: "142px" }}
                 borderRadius={"28.33px"}
                 px="11px"
                 py="6px"
@@ -75,8 +76,7 @@ function Hero() {
               </Flex>
 
               <Text
-                mt={{ base: "103px", md: "142px" }}
-                // mt={{ base: "10.77px" }}
+                mt={{ base: "91px", md: "142px" }}
                 fontSize={{ base: "36px", md: "40px", lg: "72px" }}
                 lineHeight={{ base: "45.33px", lg: "80px" }}
                 fontWeight={{ base: "700", md: "bold" }}
@@ -105,7 +105,7 @@ function Hero() {
               </Text>
 
               <InternalLink
-                display={{ base: "none", md: "inline" }}
+                fontSize={{ base: "14px" }}
                 p="unset"
                 to={"/register"}
               >
@@ -115,7 +115,7 @@ function Hero() {
 
             <GridItem pt={{ lg: "56px" }}>
               <Grid
-                mt={{ base: "40px", md: "142px" }}
+                mt={{ base: "58px", md: "142px" }}
                 gridTemplateColumns={"repeat(2, 1fr)"}
                 minH={{ base: "234px", md: "218.73px" }}
               >
@@ -170,19 +170,21 @@ function Hero() {
                         py={{ base: "12.73px" }}
                         direction={"column"}
                       >
-                        {claims.map((claim, key) => (
-                          <DisputeBox>
-                            <Image src="/images/good.svg" w="20px" h="20px" />
+                        {claims.map((claim, index) => (
+                          <Box key={index}>
+                            <DisputeBox>
+                              <Image src="/images/good.svg" w="20px" h="20px" />
 
-                            <Text
-                              textTransform={"capitalize"}
-                              ml="24px"
-                              color="white"
-                              fontSize={{ lg: "14px", base: "13px" }}
-                            >
-                              {claim}
-                            </Text>
-                          </DisputeBox>
+                              <Text
+                                textTransform={"capitalize"}
+                                ml="24px"
+                                color="white"
+                                fontSize={{ lg: "14px", base: "13px" }}
+                              >
+                                {claim}
+                              </Text>
+                            </DisputeBox>
+                          </Box>
                         ))}
                       </Flex>
                     </GridItem>
