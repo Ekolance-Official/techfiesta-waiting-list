@@ -1,18 +1,11 @@
-import {
-  Box,
-  Flex,
-  Grid,
-  GridItem,
-  Image,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Flex, Grid, GridItem, Image, Text } from "@chakra-ui/react";
 import React from "react";
 
 const howtos = [
   {
     title: "High-quality talents with relevant experience",
     description:
-      "TechFiesta has a talent pool of vetted and trained web2 and web3 developers and smart contract auditors as well as non-tech talent such as content creators, community managers, and token researchers.",
+      "techFiesta has a talent pool of vetted and trained web2 and web3 developers and smart contract auditors as well as non-tech talent such as content creators, community managers, and token researchers.",
     active: false,
     img: "globe.png",
   },
@@ -57,21 +50,18 @@ function WhyGridItem({ title, active, description, img }) {
       borderRadius={{ base: "11.3333px" }}
       borderWidth={"1px"}
       borderColor={"black"}
-      h={{ base: "220px", md: "230px", lg: "180px" }}
+      h={{ base: "220px", md: "230px",  r: "295px" }}
       gap={{ md: "14px" }}
     >
       <GridItem py="14px" px="9px">
         <Flex alignItems={"center"} mb={{ base: "16px" }}>
-          <Image
+          {/* <Image
             mr="10px"
             src={`/images/world.svg`}
             h={{ base: "24px" }}
             w={{ base: "24px" }}
-          />
-          <Text
-            fontSize={{ base: "16px" }}
-            fontWeight={"bold"}
-          >
+          /> */}
+          <Text fontSize={{ base: "16px" }} fontWeight={"bold"}>
             {title}
           </Text>
         </Flex>
@@ -83,7 +73,7 @@ function WhyGridItem({ title, active, description, img }) {
   );
 }
 
-function WhyRunYourHackathon() {
+function BenefitsOfHackathon() {
   return (
     <Box
       px={{ base: "1rem", md: "2rem" }}
@@ -103,7 +93,11 @@ function WhyRunYourHackathon() {
       </Text>
 
       <Grid
-        gridTemplateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }}
+        gridTemplateColumns={{
+          base: "repeat(1, 1fr)",
+          md: "repeat(2, 1fr)",
+          r: "repeat(5, 1fr)",
+        }}
         gap={4}
         mt={{ md: "39px" }}
       >
@@ -124,4 +118,4 @@ function WhyRunYourHackathon() {
   );
 }
 
-export default WhyRunYourHackathon;
+export default BenefitsOfHackathon;

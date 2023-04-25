@@ -23,7 +23,7 @@ function Hero() {
       px={{ base: "1rem", md: "2rem", lg: "" }}
       w={{ base: "full", r: "1200px" }}
       mx={{ lg: "auto" }}
-      mb={{ base: "58px", md: '133px' }}
+      mb={{ base: "58px", md: "133px" }}
     >
       <Grid w="full" gridTemplateColumns={"repeat(2, 1fr)"}>
         <GridItem
@@ -38,7 +38,7 @@ function Hero() {
             h="full"
             filter={"blur(250px)"}
             position={"absolute"}
-            translateX={"400"}
+            translateX={{ r: "400", lg: '100' }}
             bg={{
               base: `url('/images/gradbg.png') no-repeat`,
             }}
@@ -48,7 +48,11 @@ function Hero() {
 
         <GridItem gridColumn={"1/-1"} gridRow={"1/-1"} bg="none" zIndex={"2"}>
           <Grid
-            gridTemplateColumns={{ md: "repeat(2, 1fr)", lg: "60% 40%" }}
+            gridTemplateColumns={{
+              md: "repeat(2, 1fr)",
+              r: "60% 40%",
+              lg: "50% 50%",
+            }}
             w="full"
           >
             <GridItem w="full">
@@ -77,7 +81,7 @@ function Hero() {
 
               <Text
                 mt={{ base: "91px", md: "142px" }}
-                fontSize={{ base: "36px", md: "40px", lg: "72px" }}
+                fontSize={{ base: "36px", md: "40px", lg: "62px", r: "72px" }}
                 lineHeight={{ base: "45.33px", lg: "80px" }}
                 fontWeight={{ base: "700", md: "bold" }}
               >
@@ -113,7 +117,7 @@ function Hero() {
               </InternalLink>
             </GridItem>
 
-            <GridItem pt={{ lg: "56px" }}>
+            <GridItem pt={{ r: "56px", lg: "10px" }}>
               <Grid
                 mt={{ base: "58px", md: "142px" }}
                 gridTemplateColumns={"repeat(2, 1fr)"}

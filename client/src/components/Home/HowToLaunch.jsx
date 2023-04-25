@@ -10,27 +10,27 @@ function HowToLaunch() {
     {
       title: "Register Your Company",
       description:
-        "Sign up to our platform and create an account for your company to start organizing your hackathon",
+        "Sign up to our platform and create an account for your company to start organizing your hackathon.",
     },
     {
       title: "Define Your Hackathon",
       description:
-        "Provide information about your hackathon, including the assignments, target groups, bounties and timeline",
+        "Provide information about your hackathon, including the assignments, target groups, bounties and timeline.",
     },
     {
       title: "Launch Your Hackathon",
       description:
-        "Make your hackathon live on our platform and let particpants to join in",
+        "Make your hackathon live on our platform and let particpants to join in.",
     },
     {
       title: "Evaluate Your Results",
       description:
-        "Review submissions from participants in your company dashboard and select the winners based on the criteria you defined",
+        "Review submissions from participants in your company dashboard and select the winners based on the criteria you defined.",
     },
     {
       title: "Automate Payouts",
       description:
-        "The TechFiesta platform automatically sends bounties to the winners’ addresses after you have validated the winners",
+        "The techFiesta platform automatically sends bounties to the winners’ addresses after you have validated the winners.",
     },
   ];
 
@@ -40,7 +40,7 @@ function HowToLaunch() {
         r: "repeat(2, 1fr)",
         md: "50% 50%",
       }}
-      gap={{ r: "126px" }}
+      gap={{ r: "126px", md: '20px' }}
       w={{ base: "full", r: "1200px" }}
       mx={{ base: "auto" }}
       overflow={"hidden"}
@@ -58,7 +58,7 @@ function HowToLaunch() {
             w={{ md: "467px", lg: "unset" }}
             lineHeight={{ md: "40.83px" }}
           >
-            How to launch your Hackathons
+            How to launch your Hackathon
           </Text>
 
           <Text
@@ -68,8 +68,8 @@ function HowToLaunch() {
             lineHeight={"17.86px"}
             mb={{ base: "66px" }}
           >
-            Launching a successful hackathons has never been this easier. With
-            TechFiesta, you can create and manage your event with just a few
+            Launching a successful hackathon has never been this easier. With
+            techFiesta, you can create and manage your event with just a few
             simple steps.
           </Text>
         </Box>

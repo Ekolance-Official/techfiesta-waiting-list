@@ -38,7 +38,7 @@ function Experience() {
         </Text>
 
         <Text
-          fontSize={{ base: "14px", md: "11.16px" }}
+          fontSize={{ base: "14px", md: "11.16px", lg: '14px' }}
           lineHeight={{ base: "17.86px" }}
           fontWeight={{ base: "400" }}
         >
@@ -64,7 +64,7 @@ function Experience() {
               <Image src={`/images/${data.img}`} w="full" h="full" />
             </Box>
 
-            <Text fontSize={{ base: "14px" }} lineHeight={{ base: "17.86px" }}>
+            <Text fontSize={{ base: "14px", }} lineHeight={{ base: "17.86px" }}>
               {data.text}
             </Text>
           </Flex>

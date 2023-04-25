@@ -31,7 +31,7 @@ function BlockchainContent() {
         >
           Hackathons are the perfect way to jumpstsart the innovation process,
           with a condensed timeline that encourages quick thinking, idea
-          generation, and rapid prototyping
+          generation, and rapid prototyping.
         </Text>
       </Flex>
     </Box>

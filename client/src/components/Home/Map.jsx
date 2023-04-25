@@ -31,11 +31,11 @@ function Map() {
         >
           Be part of the world’s first hackathon platform that harnessed the
           power of blockchain technology to provide an unmatched innovation
-          experience
+          experience.
         </Text>
 
         <Box minH={{ base: "186.53px", md: "388.94px;" }} w="full">
-          <Image src={"/images/map.svg"}  alt="Developers across the globe"/>
+          <Image src={"/images/map.svg"} alt="Developers across the globe" />
         </Box>
       </Flex>
     </Box>

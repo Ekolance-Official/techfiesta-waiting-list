@@ -18,7 +18,7 @@ function HowToJoin() {
       py={{ base: "24px", md: "28.5px" }}
       mx={{ base: "1rem", md: "2rem", r: "auto" }}
       px={{ base: "1rem", md: "2rem",}}
-      gridTemplateColumns={{ md: "80% 20%", r: '70% 30%' }}
+      gridTemplateColumns={{ md: "80% 20%", lg: "55% 45%", r: '70% 30%' }}
       h={{ lg: "461px", base: "unset", r: '320px' }}
       mb={{ base: "32px", md: "128px" }}
       bg="linear-gradient(92.5deg, #333333 0%, #000000 98.89%, #000000 98.89%);"
@@ -45,7 +45,7 @@ function HowToJoin() {
             lineHeight={{ base: "17.86px", lg: "24px" }}
             mb={{ base: "32px" }}
           >
-            Are you ready to join the TechFiesta community and showcase your
+            Are you ready to join the techFiesta community and showcase your
             skills? Sign up for our waiting list today to be one of the first to
             experience our upcoming hackathons with some of the biggest names in
             the blockchain space, starting in June.

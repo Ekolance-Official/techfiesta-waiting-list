@@ -5,7 +5,7 @@ import Hero from "../../components/Home/Hero";
 import WhyContainer from "../../components/Home/WhyContainer";
 import HowToLaunch from "../../components/Home/HowToLaunch";
 import BlockchainContent from "../../components/Home/BlockchainContent";
-import WhyRunYourHackathon from "../../components/Home/WhyRunYourHackathon";
+import BenefitsOfHackathon from "../../components/Home/BenefitsOfHackathon";
 import HowToJoin from "../../components/Home/HowToJoin";
 import Footer from "../../components/Footer/Footer";
 import Map from "../../components/Home/Map";
@@ -19,7 +19,7 @@ function HomePage() {
       <Map />
       <WhyContainer />
       <BlockchainContent />
-      <WhyRunYourHackathon />
+      <BenefitsOfHackathon />
       <HowToLaunch />
       <Experience />
       <HowToJoin />

@@ -49,11 +49,10 @@ function Footer() {
           Follow us
         </Text>
 
-        <Flex justifyContent={{ lg: "center" }}>
+        <Flex justifyContent={{ lg: "center" }} gap="16px">
           <Box
             w={{ base: "24.4px", lg: "32px" }}
             h={{ base: "24.4px", lg: "32px" }}
-            mr="16px"
           >
             <ExternalLink
               href="https://t.me/+R2dFGg-iB5NlYzg0"
@@ -73,13 +72,34 @@ function Footer() {
             w={{ base: "24.4px", lg: "32px" }}
             h={{ base: "24.4px", lg: "32px" }}
           >
-            <ExternalLink href="" title="Join us on Discord">
+            <ExternalLink
+              href="https://discord.gg/xn8XbxXem9"
+              title="Join us on Discord"
+            >
               <Image
                 alt="facebook"
                 w="full"
                 h="full"
                 cursor={"pointer"}
                 src={"/images/discord.svg"}
+              />
+            </ExternalLink>
+          </Box>
+
+          <Box
+            w={{ base: "24.4px", lg: "32px" }}
+            h={{ base: "24.4px", lg: "32px" }}
+          >
+            <ExternalLink
+              href="https://twitter.com/techFiesta_hack"
+              title="Join us on Discord"
+            >
+              <Image
+                alt="facebook"
+                w="full"
+                h="full"
+                cursor={"pointer"}
+                src={"/images/twitter.svg"}
               />
             </ExternalLink>
           </Box>

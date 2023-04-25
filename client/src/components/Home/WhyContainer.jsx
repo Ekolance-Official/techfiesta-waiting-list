@@ -33,17 +33,17 @@ function WhyContainer() {
   return (
     <Box
       px={{ base: "1rem", md: "2rem" }}
-      w={{ md: "501px", lg: "1200px" }}
+      w={{ md: "501px", lg: "full", r: "1200px" }}
       mx={{ lg: "auto" }}
       minH={{ lg: "70vh" }}
       mb={{ base: "32px", md: "128px" }}
     >
-      <Grid gridTemplateColumns={{ lg: "repeat(2, 1fr)" }} gap={{ lg: "20" }}>
+      <Grid gridTemplateColumns={{ lg: "repeat(2, 1fr)" }} gap={{ r: "20" }}>
         <GridItem pb={{ base: "18px" }}>
           <Text
             fontSize={{ base: "28px", md: "32px", lg: "48px" }}
             fontWeight={{ base: "700" }}
-            lineHeight={{ base: "35.73px", md: "", lg: "" }}
+            lineHeight={{ base: "35.73px",  lg: "50px", r: '' }}
           >
             Why run a Hackathon?
           </Text>
