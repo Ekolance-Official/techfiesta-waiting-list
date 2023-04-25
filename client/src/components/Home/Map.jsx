@@ -1,4 +1,4 @@
-import { Box, Text, Flex } from "@chakra-ui/react";
+import { Box, Text, Flex, Image } from "@chakra-ui/react";
 import React from "react";
 
 function Map() {
@@ -34,7 +34,9 @@ function Map() {
           experience
         </Text>
 
-        <Box minH={{ base: "186.53px", md: "388.94px;" }} w="full"></Box>
+        <Box minH={{ base: "186.53px", md: "388.94px;" }} w="full">
+          <Image src={"/images/map.svg"}  alt="Developers across the globe"/>
+        </Box>
       </Flex>
     </Box>
   );
