@@ -121,7 +121,7 @@ function Hero() {
               <Grid
                 mt={{ base: "58px", md: "142px" }}
                 gridTemplateColumns={"repeat(2, 1fr)"}
-                minH={{ base: "234px", md: "218.73px" }}
+                minH={{ base: "234px", md: "218.73px", }}
               >
                 <GridItem
                   gridColumn={"1/-1"}
