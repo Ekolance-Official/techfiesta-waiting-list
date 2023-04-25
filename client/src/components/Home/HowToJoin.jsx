@@ -53,7 +53,7 @@ function HowToJoin() {
             <br />
             We onboard developers in batches, so don't miss out on the
             opportunity to be part of the first batch before it closes on May
-            30th!
+            30th!.
           </Text>
         </Box>
       </GridItem>

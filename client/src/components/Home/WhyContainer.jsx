@@ -12,21 +12,21 @@ function WhyContainer() {
       description:
         "Hackathons create an environment that inspires participants to think outside the box and come up with new and innovative solutions. Your company can use these events to encourage creative thinking and generate fresh ideas that can drive your business forward.",
       active: false,
-      img: "diamond.png",
+      img: "diamond.svg",
     },
     {
       title: "Boost Your Brand Visibility",
       description:
         "Hackathons are a great way to generate buzz and get people talking about your company. By hosting a successful hackathon, you can increase your brand visibility and attract the attention of potential customers who will be interested in your products or services.",
       active: true,
-      img: "idea.png",
+      img: "idea.svg",
     },
     {
       title: "attract Top Talents",
       description:
         "You can attract a diverse group of professionals, including some of the brightest minds in the industry. By hosting a hackathon, your company gets to interact with talented professionals and observe them in action. This allows you to evaluate them based on real-world scenarios, which is more effective than assessing them through standard interview questions.",
       active: false,
-      img: "physics.png",
+      img: "physics.svg",
     },
   ];
 
@@ -35,7 +35,7 @@ function WhyContainer() {
       px={{ base: "1rem", md: "2rem" }}
       w={{ md: "501px", lg: "full", r: "1200px" }}
       mx={{ lg: "auto" }}
-      minH={{ lg: "70vh" }}
+      minH={{ lg: "70vh", r: "auto" }}
       mb={{ base: "32px", md: "128px" }}
     >
       <Grid gridTemplateColumns={{ lg: "repeat(2, 1fr)" }} gap={{ r: "20" }}>

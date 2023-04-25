@@ -13,7 +13,7 @@ function Footer() {
     >
       <GridItem>
         <Flex alignItems={"center"} mt={{ base: "32px", md: "unset" }}>
-          <Box w="20.92" h="21.77" mr="4px">
+          <Box w="20.92" h="21.77">
             <Image
               w="full"
               h="full"
@@ -116,7 +116,8 @@ function Footer() {
               w="31px"
               h="31px"
               cursor={"pointer"}
-              src={"/images/human_logo.svg"}
+              src={"/images/h_logo.svg"}
+              mr={"4px"}
             />{" "}
             <Text ml={{ base: "4px", md: "unset" }}>
               Human Protocol Foundation

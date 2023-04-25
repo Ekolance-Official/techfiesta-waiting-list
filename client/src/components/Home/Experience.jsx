@@ -4,16 +4,16 @@ import React from "react";
 function Experience() {
   const datas = [
     {
-      text: "Work with the biggest names in the industry and expand your network",
-      img: "student.png",
+      text: "Work with the biggest names in the industry and expand your network.",
+      img: "student.svg",
     },
     {
-      text: "Receive fast and secure payments in stable coins by connecting your wallet to our platform",
-      img: "payment.png",
+      text: "Receive fast and secure payments in stable coins by connecting your wallet to our platform.",
+      img: "payment.svg",
     },
     {
-      text: "Build innovative projects and stand a chance to start your own business and receive a grant",
-      img: "build.png",
+      text: "Build innovative projects and stand a chance to start your own business and receive a grant.",
+      img: "build.svg",
     },
   ];
 

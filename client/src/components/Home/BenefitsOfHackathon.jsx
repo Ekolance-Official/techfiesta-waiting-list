@@ -1,5 +1,8 @@
 import { Box, Flex, Grid, GridItem, Image, Text } from "@chakra-ui/react";
 import React from "react";
+// import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper";
 
 const howtos = [
   {
@@ -50,17 +53,15 @@ function WhyGridItem({ title, active, description, img }) {
       borderRadius={{ base: "11.3333px" }}
       borderWidth={"1px"}
       borderColor={"black"}
-      h={{ base: "220px", md: "230px",  r: "295px" }}
+      h={{ base: "220px", md: "220px", r: "300px" }}
       gap={{ md: "14px" }}
     >
       <GridItem py="14px" px="9px">
-        <Flex alignItems={"center"} mb={{ base: "16px" }}>
-          {/* <Image
-            mr="10px"
-            src={`/images/world.svg`}
-            h={{ base: "24px" }}
-            w={{ base: "24px" }}
-          /> */}
+        <Flex
+          alignItems={"center"}
+          mb={{ base: "16px", lg: "20px" }}
+          h={"50px"}
+        >
           <Text fontSize={{ base: "16px" }} fontWeight={"bold"}>
             {title}
           </Text>
@@ -92,28 +93,44 @@ function BenefitsOfHackathon() {
         <Text display={"inline"}> techFiesta </Text>
       </Text>
 
-      <Grid
-        gridTemplateColumns={{
-          base: "repeat(1, 1fr)",
-          md: "repeat(2, 1fr)",
-          r: "repeat(5, 1fr)",
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={20}
+        autoplay={{
+          delay: 5000,
+          pauseOnMouseEnter: true,
+          disableOnInteraction: false,
         }}
-        gap={4}
-        mt={{ md: "39px" }}
+        modules={[Navigation, Pagination, Autoplay]}
+        breakpoints={{
+          576: {
+            slidesPerView: 1,
+          },
+          768: {
+            spaceBetween: 50,
+            slidesPerView: 2,
+          },
+          1024: {
+            spaceBetween: 10,
+            slidesPerView: 3,
+          },
+          1280: {
+            slidesPerView: 4,
+          },
+        }}
       >
         {howtos.map((props, _key) => (
-          <Box key={_key} mb={{ base: "10px" }}>
-            <Grid w={{ base: "full", md: "unset" }}>
-              <GridItem gridRow={"1/-1"} gridColumn={"1/-1"}>
-                {/* <Image src="/images/pbg.jpg" w="full" h="full" /> */}
-              </GridItem>
+          <SwiperSlide key={_key}>
+            <Grid w={{ base: "full", md: "unset" }} px="0.1rem">
+              <GridItem gridRow={"1/-1"} gridColumn={"1/-1"}></GridItem>
               <GridItem gridRow={"1/-1"} gridColumn={"1/-1"}>
                 <WhyGridItem {...props} />
               </GridItem>
             </Grid>
-          </Box>
+          </SwiperSlide>
         ))}
-      </Grid>
+      </Swiper>
+      {/* <Box h="20px" bg="red" w="full" mt="1rem"></Box> */}
     </Box>
   );
 }

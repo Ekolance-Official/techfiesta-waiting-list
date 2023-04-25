@@ -19,6 +19,7 @@ function Hero() {
         base: "calc(100vh - 5rem)",
         md: "unset",
         lg: "calc(100vh - 64px)",
+        r: 'auto',
       }}
       px={{ base: "1rem", md: "2rem", lg: "" }}
       w={{ base: "full", r: "1200px" }}
