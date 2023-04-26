@@ -4,7 +4,7 @@ import { DisputeBox } from "../../reusable/styled/components";
 import WaitingListButton from "../../reusable/components/WaitingListButton";
 import { ExternalLink, InternalLink } from "../../utils/Links";
 
-function Hero() {
+function Hero({ onOpen }) {
   const claims = [
     "Automated Job Verification Process",
     "Decentralized Job Distribution",
@@ -19,7 +19,7 @@ function Hero() {
         base: "calc(100vh - 5rem)",
         md: "unset",
         lg: "calc(100vh - 64px)",
-        r: 'auto',
+        r: "auto",
       }}
       px={{ base: "1rem", md: "2rem", lg: "" }}
       w={{ base: "full", r: "1200px" }}
@@ -39,7 +39,7 @@ function Hero() {
             h="full"
             filter={"blur(250px)"}
             position={"absolute"}
-            translateX={{ r: "400", lg: '100' }}
+            translateX={{ r: "400", lg: "100" }}
             bg={{
               base: `url('/images/gradbg.png') no-repeat`,
             }}
@@ -108,21 +108,21 @@ function Hero() {
                 Create, collaborate and innovate with the best professionals in
                 the tech space.
               </Text>
-
+              {/* 
               <InternalLink
                 fontSize={{ base: "14px" }}
                 p="unset"
                 to={"/register"}
-              >
-                <WaitingListButton />
-              </InternalLink>
+              > */}
+              <WaitingListButton {...{ onOpen }} />
+              {/* </InternalLink> */}
             </GridItem>
 
             <GridItem pt={{ r: "56px", lg: "10px" }}>
               <Grid
                 mt={{ base: "58px", md: "142px" }}
                 gridTemplateColumns={"repeat(2, 1fr)"}
-                minH={{ base: "234px", md: "218.73px", }}
+                minH={{ base: "234px", md: "218.73px" }}
               >
                 <GridItem
                   gridColumn={"1/-1"}

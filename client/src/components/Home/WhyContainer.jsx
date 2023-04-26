@@ -5,7 +5,7 @@ import HowToGridItem from "../../reusable/components/HowToGridItem";
 import { InternalLink } from "../../utils/Links";
 import { WhySingleItem } from "../../reusable/styled/components";
 
-function WhyContainer() {
+function WhyContainer({ onOpen }) {
   const howtos = [
     {
       title: "Drive Innovation ",
@@ -43,7 +43,7 @@ function WhyContainer() {
           <Text
             fontSize={{ base: "28px", md: "32px", lg: "48px" }}
             fontWeight={{ base: "700" }}
-            lineHeight={{ base: "35.73px",  lg: "50px", r: '' }}
+            lineHeight={{ base: "35.73px", lg: "50px", r: "" }}
           >
             Why run a Hackathon?
           </Text>
@@ -61,9 +61,7 @@ function WhyContainer() {
             their strategy to remain competitive in their respective industries.
           </Text>
 
-          <InternalLink to="/register">
-            <WaitingListButton />
-          </InternalLink>
+          <WaitingListButton {...{ onOpen }} />
         </GridItem>
 
         <GridItem pt={{ base: "50px", md: "42px", lg: "unset" }} color="white">

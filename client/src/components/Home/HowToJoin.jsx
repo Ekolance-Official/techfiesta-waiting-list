@@ -12,14 +12,14 @@ import React from "react";
 import WaitingListButton from "../../reusable/components/WaitingListButton";
 import { ExternalLink, InternalLink } from "../../utils/Links";
 
-function HowToJoin() {
+function HowToJoin({ onOpen }) {
   return (
     <Grid
       py={{ base: "24px", md: "28.5px" }}
       mx={{ base: "1rem", md: "2rem", r: "auto" }}
-      px={{ base: "1rem", md: "2rem",}}
-      gridTemplateColumns={{ md: "80% 20%", lg: "55% 45%", r: '70% 30%' }}
-      h={{ lg: "461px", base: "unset", r: '320px' }}
+      px={{ base: "1rem", md: "2rem" }}
+      gridTemplateColumns={{ md: "80% 20%", lg: "55% 45%", r: "70% 30%" }}
+      h={{ lg: "461px", base: "unset", r: "320px" }}
       mb={{ base: "32px", md: "128px" }}
       bg="linear-gradient(92.5deg, #333333 0%, #000000 98.89%, #000000 98.89%);"
       w={{ r: "1200px" }}
@@ -63,7 +63,6 @@ function HowToJoin() {
           alignItems={"center"}
           justifyContent={{ md: "center" }}
         >
-          <InternalLink to={"/register"} p="unset">
             <Button
               h={{ base: "44px", lg: "64px" }}
               outline={"none"}
@@ -75,10 +74,10 @@ function HowToJoin() {
               color="white"
               fontSize={{ base: "14px", lg: "16px" }}
               w={{ lg: "228px" }}
+              onClick={onOpen}
             >
               Join Waitlist
             </Button>
-          </InternalLink>
         </Flex>
       </GridItem>
     </Grid>

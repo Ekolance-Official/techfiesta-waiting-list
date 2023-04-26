@@ -10,7 +10,7 @@ import {
 import { VscMenu } from "react-icons/vsc";
 import { ExternalLink, InternalLink, NavLink } from "../../utils/Links";
 
-const Navbar = () => {
+const Navbar = ({ onOpen }) => {
   return (
     <Flex
       zIndex={"100"}
@@ -127,19 +127,20 @@ const Navbar = () => {
         aria-label={""}
       /> */}
 
-      <InternalLink display={{ md: "inline", base: "none" }} to={"/register"}>
-        <Button
-          h="44px"
-          outline={"none"}
-          transition={"all 0.2s ease-in-out"}
-          _hover={{ filter: "brightness(105%)" }}
-          bg="linear-gradient(99.72deg, #2C69D1 7.35%, #0ABCF9 86.94%) !important"
-          borderRadius={"2.8px"}
-          boxShadow={"4.5333px 4.5333px 0px rgba(51, 51, 51, 0.25)"}
-        >
-          Join Waitlist
-        </Button>
-      </InternalLink>
+      {/* <InternalLink display={{ md: "inline", base: "none" }} to={"/register"}> */}
+      <Button
+        h="44px"
+        outline={"none"}
+        transition={"all 0.2s ease-in-out"}
+        _hover={{ filter: "brightness(105%)" }}
+        bg="linear-gradient(99.72deg, #2C69D1 7.35%, #0ABCF9 86.94%) !important"
+        borderRadius={"2.8px"}
+        boxShadow={"4.5333px 4.5333px 0px rgba(51, 51, 51, 0.25)"}
+        onClick={onOpen}
+      >
+        Join Waitlist
+      </Button>
+      {/* </InternalLink> */}
 
       {/* <Drawer onClose={onClose} isOpen={isOpen} size={"sm"}>
         <DrawerOverlay />

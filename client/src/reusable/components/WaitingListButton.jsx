@@ -2,9 +2,10 @@ import React from "react";
 import { ExternalLink } from "../../utils/Links";
 import { Button } from "@chakra-ui/react";
 
-function WaitingListButton({ bgn }) {
+function WaitingListButton({ bgn, onOpen }) {
   return (
     <Button
+      onClick={onOpen}
       h="44px"
       outline={"none"}
       transition={"all 0.2s ease-in-out"}

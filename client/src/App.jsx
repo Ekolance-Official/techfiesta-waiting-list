@@ -8,8 +8,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import 'swiper/css/autoplay';
-// import NotFound from "./pages/NotFound";
+import "swiper/css/autoplay";
+import OrgRegister from "./pages/Register/OrgRegister";
+import HomePage from "./pages/Home/HomePage";
 
 const App = () => (
   <ChakraProvider theme={theme}>
@@ -24,7 +25,8 @@ const App = () => (
           }
         />
         <Route path="/register" element={<Register />} />
-        {/* <Route path="*" element={<NotFound />} /> */}
+        <Route path="/org-register" element={<OrgRegister />} />
+        <Route path="*" element={<HomePage />} />
       </Routes>
     </Router>
   </ChakraProvider>
