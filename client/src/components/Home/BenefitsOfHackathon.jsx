@@ -1,5 +1,5 @@
+import React, { useCallback, useRef } from "react";
 import { Box, Flex, Grid, GridItem, Image, Text } from "@chakra-ui/react";
-import React from "react";
 // import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper";
@@ -54,7 +54,7 @@ function WhyGridItem({ title, active, description, img }) {
       borderWidth={"1px"}
       borderColor={"black"}
       h={{ base: "220px", md: "220px", r: "300px" }}
-      gap={{ md: "14px" }}
+      // gap={{ md: "14px" }}
     >
       <GridItem py="14px" px="9px">
         <Flex
@@ -75,6 +75,18 @@ function WhyGridItem({ title, active, description, img }) {
 }
 
 function BenefitsOfHackathon() {
+  const sliderRef = useRef(null);
+
+  const handlePrev = useCallback(() => {
+    if (!sliderRef.current) return;
+    sliderRef.current.swiper.slidePrev();
+  }, []);
+
+  const handleNext = useCallback(() => {
+    if (!sliderRef.current) return;
+    sliderRef.current.swiper.slideNext();
+  }, []);
+
   return (
     <Box
       px={{ base: "1rem", md: "2rem" }}
@@ -94,10 +106,11 @@ function BenefitsOfHackathon() {
       </Text>
 
       <Swiper
+        ref={sliderRef}
         slidesPerView={1}
         spaceBetween={20}
         autoplay={{
-          delay: 5000,
+          delay: 10000,
           pauseOnMouseEnter: true,
           disableOnInteraction: false,
         }}
@@ -107,7 +120,7 @@ function BenefitsOfHackathon() {
             slidesPerView: 1,
           },
           768: {
-            spaceBetween: 50,
+            spaceBetween: 10,
             slidesPerView: 2,
           },
           1024: {
@@ -130,7 +143,56 @@ function BenefitsOfHackathon() {
           </SwiperSlide>
         ))}
       </Swiper>
-      {/* <Box h="20px" bg="red" w="full" mt="1rem"></Box> */}
+      <Box h="20px" w="full" mt="1rem">
+        <Flex alignItems={"center"} justifyContent={"flex-end"}>
+          <Box
+            w={{ base: "40px" }}
+            h={{ base: "40px" }}
+            cursor={"pointer"}
+            mr={{ base: "10px", md: "20px" }}
+            onClick={handlePrev}
+            borderRadius={"50%"}
+            color="linear-gradient(92.5deg, rgba(51, 51, 51, 0.8) 0%, rgba(0, 0, 0, 0.8) 98.89%, rgba(0, 0, 0, 0.8) 98.89%)"
+            fontSize={{ base: "35px", md: "40px" }}
+            _hover={{
+              color: "white",
+              bg: " #2C69D1 ",
+            }}
+            transition={"all 0.5ms ease-in-out"}
+          >
+            <Flex
+              alignItems={"center"}
+              h="full"
+              w="full"
+              justifyContent={"center"}
+            >
+              <i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>
+            </Flex>
+          </Box>
+          <Box
+            w={{ base: "40px" }}
+            h={{ base: "40px" }}
+            cursor={"pointer"}
+            onClick={handleNext}
+            borderRadius={"50%"}
+            _hover={{
+              color: "white",
+              bg: " #2C69D1 ",
+            }}
+            color="linear-gradient(92.5deg, rgba(51, 51, 51, 0.8) 0%, rgba(0, 0, 0, 0.8) 98.89%, rgba(0, 0, 0, 0.8) 98.89%)"
+            fontSize={{ base: "35px", md: "40px" }}
+          >
+            <Flex
+              alignItems={"center"}
+              h="full"
+              w="full"
+              justifyContent={"center"}
+            >
+              <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
+            </Flex>
+          </Box>
+        </Flex>
+      </Box>
     </Box>
   );
 }

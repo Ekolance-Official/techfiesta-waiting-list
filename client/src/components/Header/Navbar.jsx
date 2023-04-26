@@ -32,6 +32,7 @@ const Navbar = () => {
           <Box
             w={{ base: "20.92", md: "36.9px" }}
             h={{ base: "21.77", md: "36.9px" }}
+            mr="4px"
           >
             <Image
               w="full"
@@ -88,6 +89,8 @@ const Navbar = () => {
         ))}
       </Flex> */}
       <Spacer />
+
+      <Box display={{ md: "none" }} />
       {/* <Flex align="center" justify={"center"} mr="1rem">
         <ExternalLink href="https://twitter.com/getonboard_gg">
           <IconButton

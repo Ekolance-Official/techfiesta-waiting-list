@@ -18,7 +18,7 @@ function Footer() {
               w="full"
               h="full"
               cursor={"pointer"}
-              src={"/images/logo.png"}
+              src={"/images/logo.svg"}
             />
           </Box>
 
@@ -35,14 +35,6 @@ function Footer() {
             </Text>
           </Text>
         </Flex>
-        <Text
-          fontSize={{ base: "12px" }}
-          w={{ base: "155.62px" }}
-          fontWeight={"400"}
-          lineHeight={"15.31px"}
-        >
-          World best Web3 Hackhaton Platform
-        </Text>
       </GridItem>
       <GridItem mt={{ base: "32px", md: "unset" }} textAlign={{ lg: "center" }}>
         <Text fontSize={"14px"} fontWeight={"700"}>
@@ -110,25 +102,21 @@ function Footer() {
           Powered by:{" "}
         </Text>
 
-        <ExternalLink href="https://www.humanprotocol.org" title="">
-          <Flex mb="14.8px" alignItems={"center"}>
+        <Flex mb="14.8px" alignItems={"center"}>
+          <ExternalLink href="https://www.humanprotocol.org" title="">
             <Image
-              w="31px"
-              h="31px"
+              w="110px"
               cursor={"pointer"}
-              src={"/images/h_logo.svg"}
+              src={"/images/human-logo-full.svg"}
               mr={"4px"}
             />{" "}
-            <Text ml={{ base: "4px", md: "unset" }}>
-              Human Protocol Foundation
-            </Text>
-          </Flex>
-        </ExternalLink>
+          </ExternalLink>
+        </Flex>
 
         <Flex>
           <ExternalLink href="https://ekolance.io" title="">
             <Image
-              w="full"
+              w="110px"
               h="full"
               cursor={"pointer"}
               src={"/images/ekolance.svg"}
